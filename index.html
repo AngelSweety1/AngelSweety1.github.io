@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Selection</title>
+</head>
+<body>
+
+<h1 id="selectedValue"></h1>
+
+<script>
+window.onload = function() {
+    var values = ["194757", "194755", "194753", "194751", "194749", "194747", "195575", "195577", "195579", "195581"];
+    var randomIndex = Math.floor(Math.random() * values.length);    
+    var selectedValue = values[randomIndex];
+    var admpid = selectedValue;
+    document.getElementById("selectedValue").innerText = "Selected Value: " + admpid;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://js.onclckmn.com/static/onclicka.js';
+    script.setAttribute('data-admpid', admpid);
+    document.head.appendChild(script);
+};
+</script>
+
+</body>
+</html>
